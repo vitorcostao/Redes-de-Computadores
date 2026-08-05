@@ -78,9 +78,28 @@ A **arquitetura TCP/IP (Transmission Control Protocol/Internet Protocol)** é ut
 ---
 
 
+### Modelo Híbrido
 
+O **modelo híbrido** combina características tanto da arquitetura TCP/IP quanto o modelo OSI, tendo, por sua vez, cinco camadas. 
 
+1. **Física**
+   - **Função:** Transmissão de bits pelo meio físico.
+   - **Exemplos:** Cabos, fibras ópticas e sinais elétricos ou de rádio.
 
+2. **Enlace de Dados**
+   - **Função:** Comunicação entre dispositivos da mesma rede - Controle de erro, fluxo e enquadramento.
+   - **Exemplos:** Ethernet, Wi-Fi (IEEE 802.11) e endereços MAC.
 
+3. **Rede**
+   - **Função:** Define o roteamento entre redes.
+   - **Exemplos:** IP e ICMP.
 
+4. **Transporte**
+   - **Função:** Garante a entrega confiável dos dados e realiza o controle de fluxo.
+   - **Exemplos:** TCP e UDP.
 
+5. **Aplicação**
+   - **Função:** Fornece serviços de rede diretamente às aplicações do usuário.
+   - **Exemplos:** HTTP, HTTPS, FTP, SMTP, POP3, IMAP, DNS e DHCP.
+
+> OBS: Ao longo da disciplina, será tratado com modelo híbrido
