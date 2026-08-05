@@ -103,3 +103,33 @@ O **modelo híbrido** combina características tanto da arquitetura TCP/IP quant
    - **Exemplos:** HTTP, HTTPS, FTP, SMTP, POP3, IMAP, DNS e DHCP.
 
 > OBS: Ao longo da disciplina, será tratado com modelo híbrido
+
+---
+
+## Processo de comunicação em Redes
+
+<img width="1025" height="490" alt="image" src="https://github.com/user-attachments/assets/4c58dbc2-5c59-4a0e-9483-9dad9b9b9bbf" />
+
+A imagem acima ilustra como funciona o processo de comunicação de dispositivos através de redes. Desse modo, cada máquina conectada à rede possui uma pilha de protocolos que podem ser dividida em cinco camadas - 
+no caso do modelo híbrido. Nesse cenário, quando há compartilhamento de dados, a máquina fonte irá descer a linha de protocolos que está representado pela linha verde e irá percorrer a rede até chegar no destino, que, 
+posteriormente, retornará a resposta seguindo a linha amarela.
+
+Além disso, as máquinas e suas conexões são representadas por grafos, como visualizado na imagem acima Nesse contexto, algumas informações precisam ser ditas. O processo de comunicação é feito por meio de mensagens que, a cada camada, possuem nomes diferentes, além disso cada mensagem possui um cabeçalho e seu conteúdo que, 
+ao ser passada, engloba o cabeçalho da mensagem anterior. Logo, tem-se as nomenclaturas:
+
+- **Aplicação**: A mensagem se chama mensagem mesmo.
+- **Transporte**: A mensagem se chama segmento.
+- **Rede**: A mensagem se chama pacote.
+- **Enlace**: A mensagem se chama quadro ou frame.
+- **Física**: A mensagem se chama fluxo de bits.
+
+> OBS: Quando uma mensagem desce na pilha de protocolos, ela ganha um cabeçalho. Todavia, quando ela sobe, a mensagem perde um cabeçalho.
+
+### Camadas física, de enlace e de rede, o que fazem?
+
+**Física**: A camada física é responsável por transmitir bits de dados ao longo do processo de comunicação da rede para outras máquinas
+
+**Enlace**: É a camada responsável por enquadrar os dados, isto é, transformar os bits em informação, controlando erros através de Hamming e controlando fluxo.
+
+**Rede**: Na camada de rede, tem-se como principal função o roteamento de pacotes, ou seja, determinar as rotas para onde a mensagem irá. Vale ressaltar que, ao passar por máquinas que não são fonte ou alvo,
+a informação atinge até a camada de rede para então encontrar onde ela deve percorrer
