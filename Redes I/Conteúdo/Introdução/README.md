@@ -132,4 +132,27 @@ ao ser passada, engloba o cabeçalho da mensagem anterior. Logo, tem-se as nomen
 **Enlace**: É a camada responsável por enquadrar os dados, isto é, transformar os bits em informação, controlando erros através de Hamming e controlando fluxo.
 
 **Rede**: Na camada de rede, tem-se como principal função o roteamento de pacotes, ou seja, determinar as rotas para onde a mensagem irá. Vale ressaltar que, ao passar por máquinas que não são fonte ou alvo,
-a informação atinge até a camada de rede para então encontrar onde ela deve percorrer
+a informação atinge até a camada de rede para então encontrar onde ela deve percorrer.
+
+### Camada de Transporte
+
+A camada de transporte é responsável pela **comunicação fim a fim** entre processos (origem e destino).
+
+#### 1. Protocolos Principais
+
+* **TCP (*Transmission Control Protocol*):** Orientado a conexão, com confirmação de entrega de dados.
+* **UDP (*User Datagram Protocol*):** Sem conexão, sem garantia ou confirmação de entrega.
+
+
+#### 2. Endereçamento e Roteamento
+
+* **Endereço IP (Rede):** Utilizado para o **roteamento** dos pacotes entre as máquinas na rede.
+* **Endereço de Transporte (Porta):** Utilizado para identificar o **processo/aplicação** específico responsável pela comunicação.
+
+
+#### 3. Funcionamento dos Segmentos e Portas
+
+* **Serviços por Porta:** Cada serviço ou aplicação em execução na máquina possui uma porta associada.
+* **Cabeçalho do Segmento:** Contém as informações de **porta de origem** e **porta de destino**.
+* **Inversão de Dados:** Ao responder a uma solicitação, a máquina de destino inverte as informações de IP e porta de origem e destino para encaminhar a resposta de volta ao remetente.
+
